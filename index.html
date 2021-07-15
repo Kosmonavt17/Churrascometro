@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./Styles/style.css">
+  <link rel="icon" href="./Assets/grelha.svg" type="image/svg">
+  <title>Churrascômetro</title>
+</head>
+
+<body>
+
+  <div class="center">
+    <main class="container">
+      <h1 class="title">Churrascômetro</h1>
+      <p class="subTitle">Coloque quantas pessoas irão e a duração do seu churrasco para saber quanto comprar de cada
+        suprimento</p>
+      <form onsubmit="return false;">
+        <p class="fields">Quantos adultos bebem?</p>
+        <input type="number" min="0" id="drinkAdults" name="Adultos que bebem" placeholder="Adultos que bebem"
+          required><br>
+        <p class="fields">Quantos adultos não bebem?</p>
+        <input type="number" min="0" id="noDrinkAdults" name="Adultos que não bebem" placeholder="Adultos que não bebem"
+          required><br>
+        <p class="fields">Quantas crianças?</p>
+        <input type="number" min="0" id="kids" name="Crianças" placeholder="Crianças" required><br>
+        <p class="fields">Qual a duração?</p>
+        <input type="number" min="1" id="duration" name="Duração" placeholder="Duração(h)" required><br>
+        <button id="calc">Calcular</button>
+      </form>
+      <h2 id="preset"></h2>
+      <ul class="results">
+      </ul>
+    </main>
+  </div>
+
+  <script src="./Scripts/script.js"></script>
+</body>
+
+</html>
