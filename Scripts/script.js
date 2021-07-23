@@ -12,7 +12,7 @@ inputButton.addEventListener("click", function () {
   let kids = inputKids.value;
   let duration = inputDuration.value;
 
-  if ((drinkAdults, noDrinkAdults, kids, duration !== "")) {
+  if (drinkAdults && noDrinkAdults && kids && duration !== "") {
     let carne = carneBoi(drinkAdults, noDrinkAdults, kids, duration);
     let frangos = frango(drinkAdults, noDrinkAdults, kids, duration);
     let cervejas = cerveja(drinkAdults, duration);
@@ -29,16 +29,16 @@ inputButton.addEventListener("click", function () {
     beverage.setAttribute("class", "beverage");
 
     preset.innerHTML = "Será necessário gastar com:";
-    meat.innerHTML = `<img src="../Assets/carne.svg" width="20px" class="listImg"><b>${
+    meat.innerHTML = `<img src="./Assets/carne.svg" width="20px" class="listImg"><b>${
       carne / 1000
     }kg</b> de carne de boi`;
-    chicken.innerHTML = `<img src="../Assets/frango.svg" width="20px" class="listImg"><b>${
+    chicken.innerHTML = `<img src="./Assets/frango.svg" width="20px" class="listImg"><b>${
       frangos / 1000
     }kg</b> de frango`;
-    beer.innerHTML = `<img src="../Assets/cerveja.svg" width="20px" class="listImg"><b>${Math.ceil(
+    beer.innerHTML = `<img src="./Assets/cerveja.svg" width="20px" class="listImg"><b>${Math.ceil(
       cervejas / 355,
     )} latas</b> de cerveja`;
-    beverage.innerHTML = `<img src="../Assets/bebidas.svg" width="20px" class="listImg"><b>${Math.ceil(
+    beverage.innerHTML = `<img src="./Assets/bebidas.svg" width="20px" class="listImg"><b>${Math.ceil(
       bebida / 1000,
     )} garrafas de 1L</b> de bebidas`;
 
